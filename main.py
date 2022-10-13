@@ -4,23 +4,54 @@ import random
 num = random.randint(0, 100)
 print("El número " + str(num) + " es el que debes adivinar")
 print("\n\n")
-
 while True:
-  
-    intento = int(input("Introduzca un número entre 0 y 99 incluídos: "))
+    # Entramos en un bucle infinito
 
-    if intento < num:
-        print("Prueba con uno más grande")
-        print ("\n")
+    # Pedimos introducir un número
+    numero = input("Introduzca un número entre 0 y 99 para comenzar el juego: ")
 
-    elif intento > num:
-        print("Prueba con uno más pequeño")
-        print ("\n")
+
+    try:
+        numero = int(numero)
+    except:
+        pass
     else:
-        print("ENHORABUENA, HAS ACERTADO!")
-        print ("\n")
+        # Hacer la comparación
+        if 0 <= numero <= 99:
+            # Tenemos lo que queremos, salimos del bucle
+            break
 
-      
+# PARTE 2
+print("Intente encontrar el número a adivinar")
+print("\n\n")
+
+while True:  # BUCLE 1
+    # Entramos en un bucle infinito
+    # que permite jugar varios turnos
+
+    while True:  # BUCLE 2
+        # Entramos en un bucle infinito
+        # que permite corregir un error de escritura
+
+        # Pedimos introducir un número
+        intento = input("Introduzca un número entre 0 y 99 incluídos: ")
+
+        try:
+            intento = int(intento)
+        except:
+            pass
+        else:
+            # Hacer la comparación
+            if 0 <= intento <= 99:
+                # Tenemos lo que queremos, salimos del BUCLE 2
+                break
+
+    # Se prueba si el intento es correcto o no
+    if intento < num:
+        print("Demasiado pequeño")
+    elif intento > num:
+        print("Demasiado grande")
+    else:
+        print("Victoria!")
+        # Terminamos la partida, salimos del BUCLE 1
         break
-    
-#El código funciona, pero no hemos implementado la restricción de números entre 0 y 99, por lo que puedes introducir número mayores a 99 sin que el programa de error. Para que esto no ocurra, tendríamos que introducir otro bucle y que si el usuario introduce un número mayor o menor volver a pedirle que introduzca un número entre 0 y 99.
