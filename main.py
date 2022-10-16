@@ -9,7 +9,7 @@ print("2. -Nivel intermedio (del 0 al 1.000)")
 print("3. -Nivel avanzado (del 0 al 1.000.000)")
 print("4. -Nivel experto (del 0 al 1.000.000.000.000)")
 print("\n")
-respuesta=input("Elige una opción: ")
+respuesta=input("Elige una opción: (1,2,3 o 4): ")
 
 if respuesta == "1":
   import nivel_simple
