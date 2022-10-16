@@ -27,8 +27,7 @@ while True:
 print("\n")
 print("Intente encontrar el número secreto")
 print("\n\n")
-while numero_intentos<10:
-  while True:  # BUCLE 1
+while True:  # BUCLE 1
     # Entramos en un bucle infinito
     # que permite jugar varios turnos
 
@@ -48,7 +47,10 @@ while numero_intentos<10:
                 break
               
     # Se prueba si el intento es correcto o no
-    if intento < num:
+    if numero_intentos==3:
+      print("HAS UTILIZADO DEMASIADOS INTENTOS")
+      break
+    elif intento < num:
       numero_intentos=numero_intentos+1
       print("Demasiado pequeño")
       
@@ -63,5 +65,4 @@ while numero_intentos<10:
         print("Has necesitado", numero_intentos, "intentos")
         # Terminamos la partida, salimos del BUCLE 1
         break
-  break
       
