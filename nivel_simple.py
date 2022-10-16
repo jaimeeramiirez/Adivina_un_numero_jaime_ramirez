@@ -4,6 +4,8 @@ import random
 num = random.randint(0, 100)
 print("El número " + str(num) + " es el que debes adivinar")
 print("\n\n")
+numero_intentos=1
+
 while True:
     # Entramos en un bucle infinito
 
@@ -22,19 +24,18 @@ while True:
             break
 
 # PARTE 2
-print("Intente encontrar el número a adivinar")
+print("\n")
+print("Intente encontrar el número secreto")
 print("\n\n")
-
-while True:  # BUCLE 1
+while numero_intentos<10:
+  while True:  # BUCLE 1
     # Entramos en un bucle infinito
     # que permite jugar varios turnos
 
     while True:  # BUCLE 2
         # Entramos en un bucle infinito
         # que permite corregir un error de escritura
-
-        # Pedimos introducir un número
-        intento = input("Introduzca un número entre 0 y 99 incluídos: ")
+        intento = input("Introduzca un número entre 0 y 99: ")
 
         try:
             intento = int(intento)
@@ -45,13 +46,22 @@ while True:  # BUCLE 1
             if 0 <= intento <= 99:
                 # Tenemos lo que queremos, salimos del BUCLE 2
                 break
-
+              
     # Se prueba si el intento es correcto o no
     if intento < num:
-        print("Demasiado pequeño")
+      numero_intentos=numero_intentos+1
+      print("Demasiado pequeño")
+      
     elif intento > num:
-        print("Demasiado grande")
+      numero_intentos= numero_intentos+1
+      print("Demasiado grande")
+    elif numero_intentos==10:
+      print("HAS UTILIZADO DEMASIADOS INTENTOS")
+      break
     else:
         print("Victoria!")
+        print("Has necesitado", numero_intentos, "intentos")
         # Terminamos la partida, salimos del BUCLE 1
         break
+  break
+      

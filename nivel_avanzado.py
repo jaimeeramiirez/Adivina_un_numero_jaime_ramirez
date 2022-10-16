@@ -19,7 +19,6 @@ while True:
             # Tenemos lo que queremos, salimos del bucle
             break
 
-# PARTE 2
 print("Intente encontrar el número a adivinar")
 print("\n\n")
 

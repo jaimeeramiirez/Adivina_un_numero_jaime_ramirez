@@ -29,11 +29,8 @@ while True:  # BUCLE 1
     # Entramos en un bucle infinito
     # que permite jugar varios turnos
 
-    while True:  # BUCLE 2
-        # Entramos en un bucle infinito
-        # que permite corregir un error de escritura
+    while True:
 
-        # Pedimos introducir un número
         intento = input("Introduzca un número entre 0 y 1000 incluídos: ")
 
         try:
@@ -41,9 +38,9 @@ while True:  # BUCLE 1
         except:
             pass
         else:
-            # Hacer la comparación
+
             if 0 <= intento <= 1000:
-                # Tenemos lo que queremos, salimos del BUCLE 2
+
                 break
 
     # Se prueba si el intento es correcto o no
@@ -53,5 +50,5 @@ while True:  # BUCLE 1
         print("Demasiado grande")
     else:
         print("Victoria!")
-        # Terminamos la partida, salimos del BUCLE 1
+
         break
