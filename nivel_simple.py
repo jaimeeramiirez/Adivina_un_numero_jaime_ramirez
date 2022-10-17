@@ -2,9 +2,12 @@ print("\n\n\n")
 
 import random
 num = random.randint(0, 100)
+nombre_usuario= str(input("Antes de comenzar, introduzca su nombre de usuario:"))
+print("\n\n")
 print("El número " + str(num) + " es el que debes adivinar")
 print("\n\n")
 numero_intentos=1
+
 def juego():
   numero_intentos=1
   while True:
@@ -56,6 +59,7 @@ while True:  # BUCLE 1
         print("\nVictoria!")
         print("\nHas necesitado", numero_intentos, "intentos")
         break
-
+print(nombre_usuario,"su puntuación es de", numero_intentos)
 
 juego()
+nombre()
