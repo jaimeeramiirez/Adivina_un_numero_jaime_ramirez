@@ -1,54 +1,81 @@
-print("\n\n\n")
 
 import random
 num = random.randint(0, 1000000000000)
-print("El número " + str(num) + " es el que debes adivinar")
 print("\n\n")
-while True:
-    # Entramos en un bucle infinito
+nombre_usuario=str(input("Cuál es tu nombre?: "))
+#print("\nEl número " + str(num) + " es el que debes adivinar")
+print("\n\n")
+numero_intentos=1
+puntuación=0
+puntos=0
 
-    # Pedimos introducir un número
-    numero = input("Introduzca un número entre 0 y 1000000000000 para comenzar el juego: ")
-
-
+def juego():
+  numero_intentos=1
+  while True:
+    
     try:
         numero = int(numero)
     except:
         pass
     else:
-        # Hacer la comparación
         if 0 <= numero <= 1000000000000:
-            # Tenemos lo que queremos, salimos del bucle
-            break
+          break
 
-# PARTE 2
-print("Intente encontrar el número a adivinar")
+print("Intente encontrar el número secreto")
 print("\n\n")
+while True:
 
-while True:  # BUCLE 1
-    # Entramos en un bucle infinito
-    # que permite jugar varios turnos
-
-    while True:
-
-        intento = input("Introduzca un número entre 0 y 1000000000000 incluídos: ")
-
+    while True:  
+        intento = input("Introduzca un número entre 0 y 1.000.000.000.000: \n")
+      
         try:
             intento = int(intento)
         except:
             pass
         else:
-
             if 0 <= intento <= 1000000000000:
-
                 break
-
-    # Se prueba si el intento es correcto o no
-    if intento < num:
-        print("Demasiado pequeño")
+              
+    if numero_intentos==10:
+      print("\nHAS UTILIZADO DEMASIADOS INTENTOS, \nGAME OVER")
+      print("El número secreto era el:",num)
+      break
+    elif intento < num:
+      numero_intentos=numero_intentos+1
+      print("\nDemasiado pequeño")
+      
     elif intento > num:
-        print("Demasiado grande")
+      numero_intentos= numero_intentos+1
+      print("\nDemasiado grande")
     else:
-        print("Victoria!")
-
+        print("\nVictoria!")
+        print("\nHas necesitado", numero_intentos, "intentos\n")
         break
+
+#REGISTRO DE LA PUNTUACIÓN AL FINAL DEL JUEGO
+if numero_intentos==1:
+    puntuación = puntos + 100
+elif numero_intentos==2:
+    puntuación= puntos +90
+elif numero_intentos==3:
+    puntuación=puntos+80
+elif numero_intentos==4:
+    puntuación=puntos+70
+elif numero_intentos==5:
+    puntuación=puntos+60
+elif numero_intentos==6:
+    puntuación=puntos+50
+elif numero_intentos==7:
+    puntuación=puntos+40
+elif numero_intentos==8:
+    puntuación=puntos+30
+elif numero_intentos==9:
+    puntuación=puntos+20
+else:
+    puntuación= 0
+
+
+tabla=[nombre_usuario, puntuación]
+
+print(tabla)
+juego()

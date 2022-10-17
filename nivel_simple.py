@@ -3,7 +3,7 @@ import random
 num = random.randint(0, 100)
 print("\n\n")
 nombre_usuario=str(input("Cuál es tu nombre?: "))
-print("\nEl número " + str(num) + " es el que debes adivinar")
+#print("\nEl número " + str(num) + " es el que debes adivinar")
 print("\n\n")
 numero_intentos=1
 puntuación=0
@@ -36,8 +36,9 @@ while True:
             if 0 <= intento <= 99:
                 break
               
-    if numero_intentos==5:
+    if numero_intentos==10:#condicional para delimitar el número máximo de intentos
       print("\nHAS UTILIZADO DEMASIADOS INTENTOS, \nGAME OVER")
+      print("El número secreto era el:",num)
       break
     elif intento < num:
       numero_intentos=numero_intentos+1
@@ -60,8 +61,19 @@ elif numero_intentos==3:
     puntuación=puntos+80
 elif numero_intentos==4:
     puntuación=puntos+70
+elif numero_intentos==5:
+    puntuación=puntos+60
+elif numero_intentos==6:
+    puntuación=puntos+50
+elif numero_intentos==7:
+    puntuación=puntos+40
+elif numero_intentos==8:
+    puntuación=puntos+30
+elif numero_intentos==9:
+    puntuación=puntos+20
 else:
     puntuación= 0
+
 
 tabla=[nombre_usuario, puntuación]
 

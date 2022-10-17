@@ -7,6 +7,8 @@ print("*"*59)
 print("\n")
 print("*"*6,"ESCOGE TU NIVEL DE DIFICULTAD:","*"*6)
 print("\n")
+print("*"*6,"Ten en cuenta que sea cual sea el nivel de dificultad,\n tu puntuación máxima será de 100 y tendrás un máximo de 10 intentos","*"*6) #Los intentos pueden regularse en el condicional que regula el número de intentos
+print("\n")
 print("1. -Nivel simple (del 0 al 100)")
 print("2. -Nivel intermedio (del 0 al 1.000)")
 print("3. -Nivel avanzado (del 0 al 1.000.000)")
