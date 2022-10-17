@@ -49,7 +49,7 @@ while True:  # BUCLE 1
               
     # Se prueba si el intento es correcto o no
     if numero_intentos==3:
-      print("HAS UTILIZADO DEMASIADOS INTENTOS, INICIA EL JUEGO DE NUEVO")
+      print("\nHAS UTILIZADO DEMASIADOS INTENTOS, INICIA EL JUEGO DE NUEVO")
       break
     elif intento < num:
       numero_intentos=numero_intentos+1
