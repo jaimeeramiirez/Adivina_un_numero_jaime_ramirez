@@ -1,8 +1,9 @@
 print("\n\n\n")
 
 
-
-print("BIENVENIDO AL FAMOSO JUEGO DE ADIVINA UN NÚMERO \n\nESCOGE TU NIVEL DE DIFICULTAD: ")
+print("*"*45)
+print("*"*6,"BIENVENIDO AL FAMOSO JUEGO DE ADIVINA UN NÚMERO,\n\nESCOGE TU NIVEL DE DIFICULTAD:","*"*6)
+print("*"*45)
 print("\n")
 print("1. -Nivel simple (del 0 al 100)")
 print("2. -Nivel intermedio (del 0 al 1.000)")
