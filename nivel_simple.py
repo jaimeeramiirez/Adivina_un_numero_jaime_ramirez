@@ -5,12 +5,12 @@ print("\n\n")
 nombre_usuario=str(input("Cuál es tu nombre?: "))
 #print("\nEl número " + str(num) + " es el que debes adivinar")
 print("\n\n")
-numero_intentos=1
+numero_intentos=0
 puntuación=0
 puntos=0
 
 def juego():
-  numero_intentos=1
+  numero_intentos=0
   while True:
     
     try:
@@ -18,7 +18,7 @@ def juego():
     except:
         pass
     else:
-        if 0 <= numero <= 99:
+        if 0 <= numero <= 100:
           break
 
 print("Intente encontrar el número secreto")
@@ -26,14 +26,14 @@ print("\n\n")
 while True:
 
     while True:  
-        intento = input("Introduzca un número entre 0 y 99: \n")
+        intento = input("Introduzca un número entre 0 y 100: \n")
       
         try:
             intento = int(intento)
         except:
             pass
         else:
-            if 0 <= intento <= 99:
+            if 0 <= intento <= 100:
                 break
               
     if numero_intentos==10:#condicional para delimitar el número máximo de intentos

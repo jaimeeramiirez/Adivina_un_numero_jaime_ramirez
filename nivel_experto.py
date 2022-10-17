@@ -5,12 +5,12 @@ print("\n\n")
 nombre_usuario=str(input("Cuál es tu nombre?: "))
 #print("\nEl número " + str(num) + " es el que debes adivinar")
 print("\n\n")
-numero_intentos=1
+numero_intentos=0
 puntuación=0
 puntos=0
 
 def juego():
-  numero_intentos=1
+  numero_intentos=0
   while True:
     
     try:
