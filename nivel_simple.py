@@ -34,7 +34,8 @@ while True:  # BUCLE 1
     while True:  # BUCLE 2
         # Entramos en un bucle infinito
         # que permite corregir un error de escritura
-        intento = input("Introduzca un número entre 0 y 99: ")
+        intento = input("\nIntroduzca un número entre 0 y 99: \n")
+      
 
         try:
             intento = int(intento)
@@ -48,18 +49,15 @@ while True:  # BUCLE 1
               
     # Se prueba si el intento es correcto o no
     if numero_intentos==3:
-      print("HAS UTILIZADO DEMASIADOS INTENTOS")
+      print("HAS UTILIZADO DEMASIADOS INTENTOS, INICIA EL JUEGO DE NUEVO")
       break
     elif intento < num:
       numero_intentos=numero_intentos+1
-      print("Demasiado pequeño")
+      print("\nDemasiado pequeño")
       
     elif intento > num:
       numero_intentos= numero_intentos+1
-      print("Demasiado grande")
-    elif numero_intentos==10:
-      print("HAS UTILIZADO DEMASIADOS INTENTOS")
-      break
+      print("\nDemasiado grande")
     else:
         print("Victoria!")
         print("Has necesitado", numero_intentos, "intentos")
